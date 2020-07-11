@@ -1,6 +1,7 @@
 package main
 
 import (
+	"ch02/chitchat/data"
 	"net/http"
 )
 
@@ -22,7 +23,7 @@ func main() {
 	mux.HandleFunc("/thread/read", readThread)
 
 	server := &http.Server{
-		Addr:    "0.0.0.0:8000",
+		Addr:    "0.0.0.0:8080",
 		Handler: mux,
 	}
 	server.ListenAndServe()
