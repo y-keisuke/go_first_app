@@ -9,7 +9,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello!")
 }
 
-func wolrd(w http.ResponseWriter, r *http.Request) {
+func world(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "World!")
 }
 
