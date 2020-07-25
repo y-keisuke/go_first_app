@@ -2,17 +2,20 @@ package main
 
 import (
 	"encoding/json"
+	. "github.com/onsi/ginkgo"
 	"gopkg.in/check.v1"
 	_ "gopkg.in/check.v1"
 	"net/http"
 	"net/http/httptest"
 	"strings"
-	"testing"
 )
 
+var _ = Describe("Testing with Ginkgo", func() {
+})
+
 type PostTestSuite struct {
-	mux *http.ServeMux
-	post *FakePost
+	mux    *http.ServeMux
+	post   *FakePost
 	writer *httptest.ResponseRecorder
 }
 
@@ -20,7 +23,7 @@ func init() {
 	check.Suite(&PostTestSuite{})
 }
 
-func Test(t *testing.T) {check.TestingT(t)}
+func Test(t GinkgoTInterface) { check.TestingT(t) }
 
 func (s *PostTestSuite) SetUpTest(c *check.C) {
 	s.post = &FakePost{}
